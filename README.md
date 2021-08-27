@@ -1,4 +1,4 @@
-# bibliocity-adminside
+# Bibliocity-adminside
 
 ## Project setup
 ```
