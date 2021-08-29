@@ -1,19 +1,32 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Home
+  },
+  {
+    // сопоставляется со всеми остальными маршрутами
+    path: "/404",
+    name: "404",
+    component: 404,
+    component: () => import(/* webpackChunkName: "about" */ "../views/404.vue")
+  },
+
+  {
+    path: "*",
+    redirect: "/404"
   }
-]
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+  mode: "history"
+});
 
-export default router
+export default router;

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <app-nav-drawer />
+    123
     <app-header />
     <app-content />
     <app-footer />
@@ -8,18 +8,13 @@
 </template>
 
 <script>
-import AppNavDrawer from './layout/AppNavDrawer'
 import AppHeader from './layout/AppHeader'
 import AppContent from './layout/AppContent'
 import AppFooter from './layout/AppFooter'
 
 export default {
-  data () {
-    return {
-    }
-  },
+
   components: {
-    AppNavDrawer,
     AppHeader,
     AppContent,
     AppFooter
@@ -28,3 +23,15 @@ export default {
     // document.title = "Библиогород МАУ ЦБС г. Улан-Удэ";
   }
 }
+</script>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+}
+</style>

@@ -6,7 +6,7 @@
           alt="Logo"
           class="shrink  mt-2 mr-2"
           contain
-          :src="hover ? 'https://cbs-uu.ru/bibliocity/assets/logo/bibliocity6.png' : 'https://cbs-uu.ru/bibliocity/assets/logo/bibliocity7.png'"
+          src="@/assets/logo/bibliocity7.png"
           transition="slide-y-transition"
           width="73"
           @mouseover="hover = true"
@@ -20,7 +20,7 @@
         class="shrink mt-1"
         contain
         min-width="100"
-        src="https://cbs-uu.ru/bibliocity/assets/logo/img_fonts (3).png"
+        src="@/assets/logo/img_fonts (3).png"
         transition="scale-transition"
         :width="imageHeight"
       />
@@ -28,8 +28,6 @@
 
     <v-spacer></v-spacer>
 
-    <drop-down-menu />
-    <flat-menu />
     <v-app-bar-nav-icon class="d-sm-flex d-md-none" @click.stop="drawer" />
 
   </v-app-bar>
@@ -67,7 +65,7 @@ export default {
         case 'xl':
           return '300'
       }
-      return 300      
+      return 300
     }
   }
 }
