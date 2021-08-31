@@ -11,7 +11,7 @@
       </v-col>
 
       <v-col >
-        <h1 class="display-1 font-weight-bold mb-3">
+        <h1 class="display-1 font-weight-light  mb-3">
           Добро пожаловать в Библиогород. Не проходи мимо
         </h1>
 
@@ -29,6 +29,7 @@
           dark
           large
           class="ma-2 white--text"
+          @click="$router.push('/registration/')"
         >
           Зарегистрироватся
           <v-icon right dark> mdi-account-plus  </v-icon>
@@ -39,9 +40,20 @@
           color="error"
           dark
           large
+          @click="$router.push('/login/')"
         >
           Войти
           <v-icon right dark> mdi-login </v-icon>
+        </v-btn>
+                <v-btn
+          class="ma-2 white--text"
+          color="indigo"
+          dark
+          large
+          @click="$router.push('/about/')"
+        >
+          О проекте
+          <v-icon right dark> mdi-help-circle-outline </v-icon>
         </v-btn>
       </v-col>
 

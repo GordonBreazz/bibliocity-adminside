@@ -19,7 +19,7 @@
                 dark
                 flat              
               >
-                <v-toolbar-title>Вход в "Библиогород"</v-toolbar-title>
+                <v-toolbar-title>Регистрация в проекте "Библиогород"</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
@@ -55,7 +55,7 @@
                 </v-form>
               </v-card-text>
               <v-card-actions pt-3 pb-3>
-               <v-spacer></v-spacer>
+               
     <v-btn
       text
       color="primary"
