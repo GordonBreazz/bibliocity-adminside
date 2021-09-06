@@ -41,7 +41,7 @@
                   <v-text-field
                     label="Ваш e-mail"
                     name="email"
-                    prepend-icon="mdi-account"
+                    prepend-icon="mdi-account-outline"
                     type="text"
                   ></v-text-field>
 
@@ -49,19 +49,15 @@
                     id="password"
                     label="Пароль"
                     name="password"
-                    prepend-icon="mdi-lock"
+                    prepend-icon="mdi-lock-outline"
                     type="password"
                   ></v-text-field>
                 </v-form>
               </v-card-text>
               <v-card-actions pt-3 pb-3>
+                <v-card-subtitle>Нет аккауната? <router-link to="/registration">Зарегистрируйтесь</router-link></v-card-subtitle>
                <v-spacer></v-spacer>
-    <v-btn
-      text
-      color="primary"
-    >
-      Регистрация
-    </v-btn>
+  
                 <v-btn color="primary" >Войти</v-btn>
               </v-card-actions>
             </v-card>

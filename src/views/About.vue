@@ -78,7 +78,7 @@
           <v-row class="text-left pl-3">
             <v-col
               cols="1"
-              :style="iconUrl1"
+              :style="iconUrl(1)"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>
@@ -93,7 +93,7 @@
 
             <v-col
               cols="1"
-              :style="iconUrl2"
+              :style="iconUrl(2)"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>
@@ -105,7 +105,7 @@
 
             <v-col
               cols="1"
-              :style="iconUrl3"
+              :style="iconUrl(3)"
             ></v-col>
             <v-col cols="11" class="mb-10">
               <p>
@@ -116,7 +116,7 @@
 
             <v-col
               cols="1"
-              :style="iconUrl4"
+              :style="iconUrl(4)"
             ></v-col>
             <v-col cols="11">
               <p>
@@ -197,24 +197,8 @@ export default {
       ],
     };
   },
-  computed: {
-    ...mapState(["socnet"]),
-    iconUrl1() {
-        return 'background: no-repeat url(' + require('../assets/images/1.svg') + ') 50% 30%'
-        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
-    },
-    iconUrl2() {
-        return 'background: no-repeat url(' + require('../assets/images/2.svg') + ') 50% 30%'
-        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
-    },
-    iconUrl3() {
-        return 'background: no-repeat url(' + require('../assets/images/3.svg') + ') 50% 30%'
-        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
-    },
-    iconUrl4() {
-        return 'background: no-repeat url(' + require('../assets/images/4.svg') + ') 50% 30%'
-        // The path could be '../assets/img.png', etc., which depends on where your vue file is      
-    }            
+  computed: {  
+    ...mapState(["socnet"])    
   },
   methods: {
     goMap() {
@@ -223,6 +207,11 @@ export default {
     goSoc(link) {
       window.open(link);
     },
+    iconUrl(id) {
+      return `background: no-repeat url(' ${require(`../assets/images/${String(id)}.svg`)} ');
+              background-size: 100% auto; 
+              background-position: 50% 15%;`
+    }
   },
 };
 </script>
