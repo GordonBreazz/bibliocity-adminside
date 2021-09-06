@@ -292,7 +292,7 @@ export default {
     function render() {
       canvas.width = canvas.width;
       ctx.save();
-      ctx.scale(devicePixelRatio, devicePixelRatio);
+      //ctx.scale(devicePixelRatio, devicePixelRatio);
 
       crowd.forEach((peep) => {
         peep.render(ctx);
