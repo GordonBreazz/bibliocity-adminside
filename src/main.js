@@ -8,8 +8,6 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import  firebaseConfig from "../firebase.config.js"
 
-console.log(firebaseConfig.apiKey)
-
 Vue.config.productionTip = false
 
 new Vue({
