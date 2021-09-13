@@ -4,22 +4,35 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
-import initializeApp from "firebase/app";
+//import firebase from "@firebase/app";
 import { firebaseConfig } from "../firebase.config.js"
-import "firebase/auth";
-import "firebase/firestore";
+import firebase from 'firebase/app'
+import 'firebase/auth'
+// import 'firebase/database'
 
 console.log(firebaseConfig)
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-//const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
 
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+let app
+
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      vuetify,
+      render: h => h(App)
+    }).$mount('#app')
+  }
+})
+
+// new Vue({
+//   router,
+//   store,
+//   vuetify,
+//   render: h => h(App)
+// }).$mount('#app')
