@@ -4,9 +4,16 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import  firebaseConfig from "../firebase.config.js"
+import initializeApp from "firebase/app";
+import { firebaseConfig } from "../firebase.config.js"
+import "firebase/auth";
+import "firebase/firestore";
+
+console.log(firebaseConfig)
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+//const analytics = getAnalytics(app);
 
 Vue.config.productionTip = false
 
