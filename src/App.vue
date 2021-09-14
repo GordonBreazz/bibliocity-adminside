@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    123
     <app-header />
     <app-content />
     <app-footer />

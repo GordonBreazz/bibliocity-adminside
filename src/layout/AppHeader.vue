@@ -27,18 +27,21 @@
     </div>
 
     <v-spacer></v-spacer>
-
+   
+    <user-name-button />
     <v-app-bar-nav-icon class="d-sm-flex d-md-none" @click.stop="drawer" />
 
   </v-app-bar>
 </template>
 
 <script>
-// import FlatMenu from '../components/menu/FlatMenu'
+import FlatMenu from '../components/Menu/FlatMenu'
+import UserNameButton from '../components/UserNameButton'
 // import DropDownMenu from '../components/menu/DropDownMenu'
 export default {
   components: {
-    // FlatMenu,
+    FlatMenu,
+    UserNameButton
     // DropDownMenu
   },
   data () {

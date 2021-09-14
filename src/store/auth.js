@@ -7,9 +7,12 @@ export default {
             try {
                 await firebase.auth().signInWithEmailAndPassword(email, password)
             } catch (e){
-
+                throw(e)
             }           
-        }        
+        },
+        async logout(){
+            firebase.auth.singOut()
+        }
     }
 
 }

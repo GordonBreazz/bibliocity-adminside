@@ -49,7 +49,7 @@
             >
             <v-spacer></v-spacer>
 
-            <v-btn color="primary" @click="submit">Войти</v-btn>
+            <v-btn color="primary" @click="submit" :disabled="!valid">Войти</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -99,8 +99,8 @@ export default {
         await this.$store.dispatch("login", formData);
         this.$router.push("/");
       } catch (e) {
-        this.text = 'Что то пошло не так'
-        this.snackbar = true
+       // this.text = 'Что то пошло не так'
+       // this.snackbar = true
       }
     },
     submit() {                  
@@ -110,4 +110,4 @@ export default {
     }
   },
 };
-</script>>
+</script>
