@@ -28,7 +28,7 @@
 
     <v-spacer></v-spacer>
    
-    <user-name-button />
+    <user-button />
     <v-app-bar-nav-icon class="d-sm-flex d-md-none" @click.stop="drawer" />
 
   </v-app-bar>
@@ -36,12 +36,12 @@
 
 <script>
 import FlatMenu from '../components/Menu/FlatMenu'
-import UserNameButton from '../components/UserNameButton'
+import UserButton from '../components/UserButton'
 // import DropDownMenu from '../components/menu/DropDownMenu'
 export default {
   components: {
     FlatMenu,
-    UserNameButton
+    UserButton
     // DropDownMenu
   },
   data () {

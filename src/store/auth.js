@@ -1,17 +1,17 @@
-import firebase from 'firebase/app'
+import firebase from '@firebase/app'
 
 export default {
     actions: {
-        async login({dispatch, commit}, {email, password}) {
-            
+        async login({ dispatch, commit }, { email, password }) {
+
             try {
                 await firebase.auth().signInWithEmailAndPassword(email, password)
-            } catch (e){
-                throw(e)
-            }           
+            } catch (e) {
+                throw (e)
+            }
         },
-        async logout(){
-            firebase.auth.singOut()
+        async logout() {
+            await firebase.auth().singOut()
         }
     }
 
