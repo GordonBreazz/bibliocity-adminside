@@ -15,7 +15,7 @@ export default new Vuex.Store({
       },
       {
         name: "vk",
-        icon: "mdi-vk",
+        icon: "mdi-account-group",
         link: "https://vk.com/ik_kalashnikov",
         hint: "Наша группа ВКонтакте"
       },
