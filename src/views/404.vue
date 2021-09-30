@@ -30,5 +30,6 @@ export default {}
 <style scoped>
 .title-404 {
   font-size: 150pt;
+  margin-left: 0px;
 }
 </style>
