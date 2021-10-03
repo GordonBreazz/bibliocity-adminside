@@ -22,11 +22,12 @@ let app
 
 firebase.auth().onAuthStateChanged(() => {
   if (!app) {
+    console.log('ok')
     app = new Vue({
       router,
       store,
       vuetify,
-      render: h => h(App)
+      render: h => h(App)      
     }).$mount('#app')
   }
 })
