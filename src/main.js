@@ -11,7 +11,7 @@ import 'firebase/auth'
 // import 'firebase/database'
 
 console.log(firebaseConfig)
-// Авторизация
+// Авторизация пользоателя
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
