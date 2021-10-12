@@ -12,6 +12,7 @@ import 'firebase/auth'
 
 console.log(firebaseConfig)
 // Авторизация пользоателя
+// API SOAP
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
