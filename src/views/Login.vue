@@ -44,7 +44,7 @@
             <v-card-subtitle
               >Нет аккауната?
               <router-link to="/registration"
-                >Зарегистрируйтесь</router-link
+                >Зарегистрируйтесь!</router-link
               ></v-card-subtitle
             >
             <v-spacer></v-spacer>
@@ -59,7 +59,7 @@
 
       <template v-slot:action="{ attrs }">
         <v-btn color="grey lighten-5" text small v-bind="attrs" @click="snackbar = false">
-          Закрыть
+          Закрыть!
         </v-btn>
       </template>
     </v-snackbar>
